@@ -1,0 +1,13 @@
+name: Pitch Dark Github Action
+
+on:
+    push:
+      paths-ignore:
+        - '**/README.md'
+        - '**/CONTRIBUTING'
+        - '**/LICENSE'
+
+jobs:
+    mirror:
+        name: Mirror
+        uses: ./.github/workflows/mirror.yml
