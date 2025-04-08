@@ -22,10 +22,10 @@ Based on the Pitch Dark concept document, I've identified the following core fun
 ### Core Gameplay Mechanics
 
 - Player movement and basic interaction with the environment
-- The Brouillard (Pitch) mechanic with progressive expansion and environmental alteration
+- The Fog (Pitch) mechanic with progressive expansion and environmental alteration
 - Basic combat system with functional weapons (both firearms and melee)
 - Weapon degradation and enrayement (jamming) mechanics
-- Mental health/sanity system affected by exposure to the Brouillard
+- Mental health/sanity system affected by exposure to the Fog
 
 ### Essential Mission Structure
 
@@ -45,15 +45,15 @@ Based on the Pitch Dark concept document, I've identified the following core fun
 - Test crouching, running, and other movement options
 - Verify collision detection works properly with environment
 
-### Scenario 2: The Brouillard (Pitch) Mechanic
+### Scenario 2: The Fog (Pitch) Mechanic
 
-**User Role:** Player Feature Being Tested: Brouillard expansion and effects Expected Outcome: The Brouillard visibly affects the environment and player perception Steps to Execute:
+**User Role:** Player Feature Being Tested: Fog expansion and effects Expected Outcome: The Fog visibly affects the environment and player perception Steps to Execute:
 
-- Enter an area where the Brouillard is present
+- Enter an area where the Fog is present
 - Observe visual and audio distortion effects
-- Remain in the Brouillard for 60 seconds and note mental health degradation
-- Test using protective equipment to mitigate Brouillard effects
-- Verify that the Brouillard expands over time as described in the design document
+- Remain in the Fog for 60 seconds and note mental health degradation
+- Test using protective equipment to mitigate Fog effects
+- Verify that the Fog expands over time as described in the design document
 
 ### Scenario 3: Combat System
 
@@ -94,7 +94,7 @@ Based on the Pitch Dark concept document, I've identified the following core fun
 
 - Player awakens from stasis and learns basic controls
 - Player discovers the damaged state of the ship
-- Player encounters the Brouillard for the first time
+- Player encounters the Fog for the first time
 - Player acquires first weapons and encounters enemies
 - Player receives Mission 1 objectives
 - Player completes first mission objectives while managing resources
@@ -105,8 +105,8 @@ Based on the Pitch Dark concept document, I've identified the following core fun
 - Player death and respawn mechanics
 - Running out of ammunition during combat
 - Weapon breaking during critical encounters
-- Extreme mental health degradation from Brouillard exposure
-- Getting trapped in areas being consumed by the Brouillard
+- Extreme mental health degradation from Fog exposure
+- Getting trapped in areas being consumed by the Fog
 
 ## 4. Clear Evaluation Criteria
 
@@ -121,7 +121,7 @@ Based on the Pitch Dark concept document, I've identified the following core fun
 - Players should be able to complete Mission 1 within 45-60 minutes
 - First-time players should be able to understand core mechanics without excessive tutorial prompts
 - Weapon degradation should be balanced to encourage strategic use without frustration
-- Brouillard effects should create tension without being overly punishing in early gameplay
+- Fog effects should create tension without being overly punishing in early gameplay
 
 ### Success Criteria
 
@@ -140,5 +140,5 @@ The beta version will include:
 - Partial Mission 2 to demonstrate exploration mechanics
 - At least 3 different weapon types (1 firearm, 2 melee)
 - One fully implemented Réplicant enemy type
-- Core Brouillard mechanics with visual and gameplay effects
+- Core Fog mechanics with visual and gameplay effects
 - Basic UI elements including health, mental state, and objective tracking
