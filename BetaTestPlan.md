@@ -17,15 +17,12 @@
 
 ## 1. Selection of Core Functionalities
 
-Based on the Pitch Dark concept document, I've identified the following core functionalities that must be available in the beta version:
-
 ### Core Gameplay Mechanics
 
 - Player movement and basic interaction with the environment
 - The Fog (Pitch) mechanic with progressive expansion and environmental alteration
-- Basic combat system with functional weapons (both firearms and melee)
-- Weapon degradation and enrayement (jamming) mechanics
-- Mental health/sanity system affected by exposure to the Fog
+- Basic combat system with functional weapons (firearms)
+- The Fog affect the player visuel (pixelisation of the hud)
 
 ### Essential Mission Structure
 
@@ -59,12 +56,9 @@ Based on the Pitch Dark concept document, I've identified the following core fun
 
 **User Role:** Player Feature Being Tested: Weapon functionality and enemy interaction Expected Outcome: Weapons function as designed with appropriate feedback and damage Steps to Execute:
 
-- Acquire both a firearm (pistol) and melee weapon (knife)
+- Acquire a firearm (pistol)
 - Encounter a basic enemy
 - Test firearm combat including aiming, firing, and reloading
-- Test melee combat including different attack types
-- Verify weapon degradation occurs with repeated use
-- Test weapon jamming mechanics with firearms
 
 ### Scenario 4: Réplicant Enemy Encounter
 
@@ -80,12 +74,8 @@ Based on the Pitch Dark concept document, I've identified the following core fun
 
 **User Role:** Player Feature Being Tested: Mission structure and objective tracking Expected Outcome: Player can complete all objectives with proper guidance and feedback Steps to Execute:
 
-- Receive Mission 1 objectives
-- Locate auxiliary power generators
-- Repair damaged cables affected by the Pitch
+- Receive Mission 1 objectives (to define)
 - Avoid Réplicants attempting to sabotage efforts
-- Access the main control room
-- Reactivate life support systems
 - Verify mission completion and reward
 
 ## 3. Coverage of Key User Journeys
@@ -104,8 +94,7 @@ Based on the Pitch Dark concept document, I've identified the following core fun
 
 - Player death and respawn mechanics
 - Running out of ammunition during combat
-- Weapon breaking during critical encounters
-- Extreme mental health degradation from Fog exposure
+- Degradation from Fog exposure
 - Getting trapped in areas being consumed by the Fog
 
 ## 4. Clear Evaluation Criteria
@@ -118,7 +107,7 @@ Based on the Pitch Dark concept document, I've identified the following core fun
 
 ### Gameplay Metrics
 
-- Players should be able to complete Mission 1 within 45-60 minutes
+- Players should be able to complete Mission 1 within 10-15 minutes
 - First-time players should be able to understand core mechanics without excessive tutorial prompts
 - Weapon degradation should be balanced to encourage strategic use without frustration
 - Fog effects should create tension without being overly punishing in early gameplay
@@ -138,7 +127,7 @@ The beta version will include:
 - Playable introduction sequence
 - Complete Mission 1 with all objectives
 - Partial Mission 2 to demonstrate exploration mechanics
-- At least 3 different weapon types (1 firearm, 2 melee)
+- At least different weapon
 - One fully implemented Réplicant enemy type
 - Core Fog mechanics with visual and gameplay effects
-- Basic UI elements including health, mental state, and objective tracking
+- Basic UI elements including health and objective tracking
