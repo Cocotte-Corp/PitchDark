@@ -26,10 +26,10 @@
 | Action             | Implementation                                                                 |
 |--------------------|----------------------------------------------------------------------------------|
 | Basic Movement     | `CharacterMovementComponent`, mapped via `Enhanced Input System`                |
-| Interact / Pickup  | `LineTraceByChannel` or `SphereTrace`, trigger interaction interface on hit     |
+| Interact / Pickup  | `LineTraceByChannel`, trigger interaction interface on hit     |
 | Use Items          | Equip or consume via Inventory system → Interface to `ItemData` or gameplay tags |
 | Weapon Handling    | Modular `WeaponComponent`, supports fire modes, noise emission, and durability   |
-| Crouch / Lean      | Animation Blueprint + `Camera Offset`, `Capsule Half Height` adjustment          |
+| Crouch / Lean      | Animation Blueprint and `Capsule Half Height` for adjustment          |
 
 ### Inventory & Equipment
 
@@ -109,7 +109,7 @@
 |----------------------|---------------------------------------------------------------------------|
 | HUD                  | Health, equipped item, stealth status, and ammo (if applicable)           |
 | Inventory            | UMG Widget with drag-drop, tooltips from `ItemDataAsset`                 |
-| Objectives Tracker   | Lists active and completed objectives, supports localization              |
+| Objectives Tracker   | Lists active and completed objectives, supports  localization              |
 | Enemy Alert Indicator| On-screen UI pulses or warning text when player is spotted/heard         |
 | Context Prompts      | Dynamic prompt widget triggered from `Interactable Interface` targets     |
 
@@ -148,9 +148,9 @@
 ## Unreal Engine Implementation Notes
 
 - **Project Structure**:
-  - `/Core/Characters/`, `/Core/AI/`, `/Core/Items/`, `/Widgets/`, `/Blueprints/Utility/`
-- **Blueprints & C++ Split**:
-  - Core logic (AI, Inventory, Status) in C++
+  - `/Content/Characters/`, `/Content/AI/`, `/Content/Items/`, `/Widgets/`, `/Blueprints/Utility/`
+- **Blueprints**:
+  - Core logic (AI, Inventory, Status) in Blueprints
   - Quick iteration (UI, visual scripting) in Blueprints
 - **Key Plugins**:
   - `Enhanced Input`
