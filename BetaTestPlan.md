@@ -1,133 +1,129 @@
-# Beta Test Plan for Pitch Dark
+# **BETA TEST PLAN – PITCH DARK**
 
-## Sumary
+## **1. Core Functionalities for Beta Version**
+Below are the essential features that must be available for beta testing.
 
-- [Project Information](#project-information)
-- [1. Selection of Core Functionalities](#1-selection-of-core-functionalities)
-- [2. Definition of Beta Testing Scenarios](#2-definition-of-beta-testing-scenarios)
-- [3. Coverage of Key User Journeys](#3-coverage-of-key-user-journeys)
-- [4. Clear Evaluation Criteria](#4-clear-evaluation-criteria)
-- [5. Deliverables & Format](#5-deliverables--format)
+| **Feature Name**  | **Description** | **Priority (High/Medium/Low)** |
+|-------------------|---------------|--------------------------------|
+| Player Movement & Interaction  | Basic movement controls and environment interaction capabilities | High |
+| Fog (Pitch) Mechanic  | Progressive expansion and environmental alteration with pixelization of HUD | High |
+| Combat System  | Functional weapons (firearms) with basic combat mechanics | High |
+| Réplicant Enemies  | AI-driven enemies with scanning and mimicry abilities | Medium |
+| Mission Structure  | Tutorial mission (Reactivating Primary Systems) and exploration mission (Locating Priority Repairs) | Medium |
 
-## Project Information
+---
 
-- **Project Name: Pitch Dark**
-- **Team Members: Amaury Bariety, Bastien Rodrigues, Cyprien Nguyen-Van-Vien, Damien Benais-Captal and Viktor Bruggeman**
-- **Repository: [Github](https://github.com/Cocotte-Corp/PitchDark)**
+## **2. Beta Testing Scenarios**
 
-## 1. Selection of Core Functionalities
+### **2.1 User Roles**
+The following roles will be involved in beta testing.
 
-### Core Gameplay Mechanics
+| **Role Name**  | **Description** |
+|---------------|---------------|
+| Player        | User controlling the Robot character, testing all gameplay features |
 
-- Player movement and basic interaction with the environment
-- The Fog (Pitch) mechanic with progressive expansion and environmental alteration
-- Basic combat system with functional weapons (firearms)
-- The Fog affect the player visuel (pixelisation of the hud)
+---
 
-### Essential Mission Structure
+### **2.2 Test Scenarios**
+For each core functionality, detailed test scenarios are provided below.
 
-- Mission 1: Reactivating Primary Systems - This will serve as the tutorial mission
-- Mission 2: Locating Priority Repairs - This will demonstrate exploration mechanics
-- At least one encounter with a Réplicant enemy
+#### **Scenario 1: Basic Navigation and Environment Interaction**
+- **Role Involved:** Player
+- **Objective:** Ensure player can move freely and interact with the environment
+- **Preconditions:** New game started
+- **Test Steps:**
+  1. Complete initial awakening sequence
+  2. Navigate through the first corridor section
+  3. Interact with doors, panels, and objects
+  4. Test crouching, running, and other movement options
+  5. Verify collision detection works properly with environment
+- **Expected Outcome:** Player can move freely through accessible areas and interact with key objects
 
-## 2. Definition of Beta Testing Scenarios
+#### **Scenario 2: The Fog (Pitch) Mechanic**
+- **Role Involved:** Player
+- **Objective:** Verify Fog visual effects and gameplay impact
+- **Preconditions:** Player has reached an area where Fog is present
+- **Test Steps:**
+  1. Enter an area where the Fog is present
+  2. Observe visual and audio distortion effects
+  3. Remain in the Fog for 60 seconds and note mental health degradation
+  4. Test using protective equipment to mitigate Fog effects
+  5. Verify that the Fog expands over time as described in the design document
+- **Expected Outcome:** The Fog visibly affects the environment and player perception
 
-### Scenario 1: Basic Navigation and Environment Interaction
+#### **Scenario 3: Combat System**
+- **Role Involved:** Player
+- **Objective:** Test weapon functionality and enemy interaction
+- **Preconditions:** Player has acquired a weapon
+- **Test Steps:**
+  1. Acquire a firearm (pistol)
+  2. Encounter a basic enemy
+  3. Test firearm combat including aiming, firing, and reloading
+- **Expected Outcome:** Weapons function as designed with appropriate feedback and damage
 
-**User Role:** Player (Robot character) Feature Being Tested: Movement and interaction with the environment Expected Outcome: Player can move freely through accessible areas and interact with key objects Steps to Execute:
+#### **Scenario 4: Réplicant Enemy Encounter**
+- **Role Involved:** Player
+- **Objective:** Test Réplicant AI and mimicry abilities
+- **Preconditions:** Player has reached a point where Réplicants appear
+- **Test Steps:**
+  1. Trigger a Réplicant encounter
+  2. Observe the Réplicant scanning behavior
+  3. Test how the Réplicant responds to different player actions
+  4. Verify that the Réplicant can mimic appearance and voice
+  5. Test combat against the Réplicant to ensure proper difficulty balance
+- **Expected Outcome:** Réplicant demonstrates scanning, mimicry, and adaptive behavior
 
-- Start a new game and complete initial awakening sequence
-- Navigate through the first corridor section
-- Interact with doors, panels, and objects
-- Test crouching, running, and other movement options
-- Verify collision detection works properly with environment
+#### **Scenario 5: Mission 1 Completion**
+- **Role Involved:** Player
+- **Objective:** Verify mission structure and objective tracking
+- **Preconditions:** Player has started Mission 1
+- **Test Steps:**
+  1. Receive Mission 1 objectives
+  2. Complete required tasks while avoiding Réplicants
+  3. Verify mission completion and reward
+- **Expected Outcome:** Player can complete all objectives with proper guidance and feedback
 
-### Scenario 2: The Fog (Pitch) Mechanic
+---
 
-**User Role:** Player Feature Being Tested: Fog expansion and effects Expected Outcome: The Fog visibly affects the environment and player perception Steps to Execute:
+## **3. Success Criteria**
+The following criteria will be used to determine the success of the beta version.
 
-- Enter an area where the Fog is present
-- Observe visual and audio distortion effects
-- Remain in the Fog for 60 seconds and note mental health degradation
-- Test using protective equipment to mitigate Fog effects
-- Verify that the Fog expands over time as described in the design document
+| **Criterion** | **Description** | **Threshold for Success** |
+|--------------|---------------|------------------------|
+| Completion Rate | Players can complete Mission 1 without getting stuck | 80% of testers |
+| Atmosphere | Players report the game atmosphere as "tense" or "scary" | 70% of testers |
+| Mechanics Understanding | Players understand core mechanics after first mission | 75% of testers |
+| Technical Performance | Frame rate maintains target performance | At least 30 FPS on target hardware |
+| Bug Frequency | Game-breaking bugs are rare | Less than 10% of testers encounter any |
+| Player Interest | Players express interest in the full game | 70% of testers |
 
-### Scenario 3: Combat System
+---
 
-**User Role:** Player Feature Being Tested: Weapon functionality and enemy interaction Expected Outcome: Weapons function as designed with appropriate feedback and damage Steps to Execute:
+## **4. Known Issues & Limitations**
 
-- Acquire a firearm (pistol)
-- Encounter a basic enemy
-- Test firearm combat including aiming, firing, and reloading
+| **Issue** | **Description** | **Impact** | **Planned Fix? (Yes/No)** |
+|----------|---------------|----------|----------------|
+| Loading Times | Loading between areas may be longer than desired | Medium | Yes |
+| Combat Balance | Weapon effectiveness against enemies may need adjustment | Medium | Yes |
+| Fog Visual Effects | Some Fog effects may not be optimized for all hardware | Medium | Yes |
 
-### Scenario 4: Réplicant Enemy Encounter
+---
 
-**User Role:** Player Feature Being Tested: Réplicant AI and mimicry abilities Expected Outcome: Réplicant demonstrates scanning, mimicry, and adaptive behavior Steps to Execute:
-
-- Trigger a Réplicant encounter
-- Observe the Réplicant scanning behavior
-- Test how the Réplicant responds to different player actions
-- Verify that the Réplicant can mimic appearance and voice
-- Test combat against the Réplicant to ensure proper difficulty balance
-
-### Scenario 5: Mission 1 Completion
-
-**User Role:** Player Feature Being Tested: Mission structure and objective tracking Expected Outcome: Player can complete all objectives with proper guidance and feedback Steps to Execute:
-
-- Receive Mission 1 objectives (to define)
-- Avoid Réplicants attempting to sabotage efforts
-- Verify mission completion and reward
-
-## 3. Coverage of Key User Journeys
-
-### Primary User Journey: First Hour of Gameplay
-
-- Player awakens from stasis and learns basic controls
-- Player discovers the damaged state of the ship
-- Player encounters the Fog for the first time
-- Player acquires first weapons and encounters enemies
-- Player receives Mission 1 objectives
-- Player completes first mission objectives while managing resources
-- Player experiences first major Réplicant encounter
-
-### Edge Cases and Failure Points
-
-- Player death and respawn mechanics
-- Running out of ammunition during combat
-- Degradation from Fog exposure
-- Getting trapped in areas being consumed by the Fog
-
-## 4. Clear Evaluation Criteria
-
-### Performance Metrics
-
-- Frame rate must maintain at least 30 FPS on target hardware
-- Loading times between areas should not exceed 15 seconds
-- Combat responsiveness should have less than 100ms input lag
-
-### Gameplay Metrics
-
-- Players should be able to complete Mission 1 within 10-15 minutes
-- First-time players should be able to understand core mechanics without excessive tutorial prompts
-- Weapon degradation should be balanced to encourage strategic use without frustration
-- Fog effects should create tension without being overly punishing in early gameplay
-
-### Success Criteria
-
-- 80% of testers can complete Mission 1 without getting stuck
-- 70% of testers report the atmosphere as "tense" or "scary"
-- 75% of testers understand the core mechanics after the first mission
-- Less than 10% of testers encounter any game-breaking bugs
-- 70% of testers express interest in playing the full game
-
-## 5. Deliverables & Format
-
+## **5. Deliverables & Format**
 The beta version will include:
 
 - Playable introduction sequence
 - Complete Mission 1 with all objectives
 - Partial Mission 2 to demonstrate exploration mechanics
-- At least different weapon
+- At least one different weapon
 - One fully implemented Réplicant enemy type
 - Core Fog mechanics with visual and gameplay effects
 - Basic UI elements including health and objective tracking
+
+---
+
+## **Project Information**
+
+- **Project Name:** Pitch Dark
+- **Team Members:** Amaury Bariety, Bastien Rodrigues, Cyprien Nguyen-Van-Vien, Damien Benais-Captal and Viktor Bruggeman
+- **Repository:** [Github](https://github.com/Cocotte-Corp/PitchDark)
