@@ -13,9 +13,12 @@
 3. [Level Design](#level-design)
 4. [AI System](#ai-system)
 5. [UI System](#ui-system)
-6. [Core Game Loop](#core-game-loop)
-7. [Immersion](#immersion)
-8. [Unreal Engine Implementation Notes](#unreal-engine-implementation-notes)
+6. [Interaction system](#interaction-system)
+7. [Elevator](#elevator)
+8. [Core Game Loop](#core-game-loop)
+9. [Immersion](#immersion)
+10. [External Plugins](#external-plugins)
+11. [Unreal Engine Implementation Notes](#unreal-engine-implementation-notes)
 
 ---
 
@@ -115,6 +118,51 @@
 
 ---
 
+## Interaction System
+
+Interactive elements:
+- **Static mesh**
+- **Collision box**
+- **Inherit from Interface**
+
+Interactives can be **lootables** of **triggers**.
+
+Player:
+- **Interactive value** (None/InteractiveObject)
+- **Raycast**
+
+Behaviour:
+1. **Player Interactive value** to **None** by default
+2. On **collisionBoxBeginOverlap** and **Raycast**, set Player Interactive value to **Item**
+3. On Interact input, **execute item trigger function** and reset values
+- On **collisionBoxEndOverlap**, set Player Interactive value to **None**
+
+---
+
+## Elevator
+
+Required elements:
+- Elevator cage
+- Elevator button
+
+Elevator cage values:
+- **linked elevator** (None/Exposed elevator)
+- **linked level** (None/Object)
+- Center of the cage
+
+Elevator button value:
+- **linked elevator** (Exposed)
+
+Behaviour:
+1. Interact with button
+2. Teleport to the center of linked cage
+3. play animations
+4. **interact based on values**
+  - if linked elevator, teleport to linked elevator
+  - if linked level, open level
+
+---
+
 ## Core Game Loop
 
 ```
@@ -142,6 +190,15 @@
 | Lighting Control       | Interactive lighting (e.g., power restoration, light-switch puzzles)|
 | Haptics / Gamepad      | Rumble triggers during chase sequences or key discoveries          |
 | Diegetic UI            | Use world-space interfaces (e.g., wrist display, terminals)         |
+
+---
+
+## External Plugins
+
+### Async loading screen
+
+Used to load elements of a level before opening it, avoiding objects spawn, clipping as well as collision issues and initialisation.
+Contains options for a screen when opening the game and when changing scenes.
 
 ---
 
