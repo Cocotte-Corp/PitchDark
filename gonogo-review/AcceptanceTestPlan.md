@@ -19,12 +19,82 @@ Below are the essential features that must be available for beta testing.
 
 ### **2.1 Main menu**
 
+    Create Lobby Button:
+        A Create Lobby button is visible on the main menu.
+        When pressed, it opens a lobby creation interface.
+        The player can configure basic settings (e.g., lobby name, visibility, max players).
+        Pressing Confirm creates a lobby and the player is placed inside it as the host.
+
+    Join Lobby Button:
+        A Join Lobby button is visible on the main menu.
+        When pressed, it displays a list of available lobbies.
+        The player can select a lobby and join it successfully.
+        If a lobby is full or no longer available, an error message is displayed.
+
+    Tutorial Button:
+        A Tutorial button is visible on the main menu.
+        When pressed, it starts the tutorial sequence.
+        The player is placed into the tutorial environment.
+        The tutorial can be exited back to the main menu at any time.
+
+    Options Button:
+        An Options button is visible on the main menu.
+        When pressed, it opens the options menu with categories (Video, Audio, Controls).
+        The player can change settings and confirm changes.
+        The player can return to the main menu from the options menu.
+
+    Quit Game Button:
+        A Quit button is visible on the main menu.
+        When pressed, it asks the player to confirm quitting.
+        Confirming closes the game application.
+        Cancelling returns the player to the main menu.
+
 #### **2.1.1 Settings**
+
+    Visual Parameters:
+        The player can open the Options → Video menu.
+        The player can change resolution and graphics quality settings.
+        Changes are applied immediately or after confirmation.
+        Settings are saved and remain active after restarting the game.
+
+    Audio Parameters:
+        The player can open the Options → Audio menu.
+        The player can adjust master volume, music volume, and sound effects volume.
+        Changes are applied in real-time.
+        Settings are saved and remain active after restarting the game.
+
+    Key Bindings:
+        The player can open the Options → Controls menu.
+        The player can rebind movement keys, actions, and other controls.
+        The player can restore defaults at any time.
+        Settings are saved and remain active after restarting the game.
+
 #### **2.1.2 Lobby**
+
+    Player List:
+        The lobby displays a list of all connected players.
+        Each player’s username and profile picture are visible.
+        The host is clearly identified in the list.
+        Ready Status
+        Each player can toggle their Ready / Not Ready status.
+        The current status is visible to all players in the lobby.
+        The lobby prevents the game from starting until minimum requirements are met (e.g., minimum players, all players ready).
+
+    Host Controls:
+        The host has the ability to start the game once all conditions are met.
+        The host can see which players are ready and which are not.
+        If a player disconnects or leaves, the lobby updates immediately.
+        If the host leaves, host migration occurs (if supported) or the lobby closes.
+
+    General Behavior:
+        Players can leave the lobby at any time and return to the main menu.
+        The lobby updates in real-time when players join, leave, or change status.
+        Error handling is provided (e.g., if the host starts the game but a player disconnects at the same moment).
 
 ### **2.2 Player behaviour**
 
 #### **2.2.1 Player input**
+
 #### **2.2.2 Animations**
 
 ### **2.3 AI Behaviour**
