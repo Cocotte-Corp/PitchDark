@@ -124,6 +124,20 @@ Below are the essential features that must be available for beta testing.
 
 ### **2.4 Multiplayer functionalities**
 
+### **2.4.1 Lobby functionalities**
+
+    Players can create a lobby
+    Players can destroy a lobby
+    Players can join a lobby
+    Players can leave a lobby
+    Players can send messages in chat and see those from others
+    The game launch when all players are ready
+
+### **2.4.2 In-Game features**
+
+    Players can see other player behaviours
+    Dead player can see other players point of view
+
 ---
 
 ## **3. Success Criteria**
