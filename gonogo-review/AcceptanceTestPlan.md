@@ -39,7 +39,7 @@ Below are the essential features that must be available for beta testing.
 
     Options Button:
         An Options button is visible on the main menu.
-        When pressed, it opens the options menu with categories (Video, Audio, Controls).
+        When pressed, it opens the options menu with categories (Video, Audio, Keybinds).
         The player can change settings and confirm changes.
         The player can return to the main menu from the options menu.
 
@@ -64,8 +64,8 @@ Below are the essential features that must be available for beta testing.
         Settings are saved and remain active after restarting the game.
 
     Key Bindings:
-        The player can open the Options → Controls menu.
-        The player can rebind movement keys, actions, and other controls.
+        The player can open the Options → Keybinds menu.
+        The player can rebind movement keys, actions, and other Keybinds.
         The player can restore defaults at any time.
         Settings are saved and remain active after restarting the game.
 
@@ -115,7 +115,7 @@ Below are the essential features that must be available for beta testing.
         - Riffle gun
         - Pistol
         - Metal pipe
-    
+
     Players can loot magazines for their weapons.
     Players are able to reload a weapon ONLY IF magazines in inventory.
     Players cannot shoot while running.
