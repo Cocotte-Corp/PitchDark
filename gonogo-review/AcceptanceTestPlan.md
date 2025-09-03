@@ -95,7 +95,30 @@ Below are the essential features that must be available for beta testing.
 
 #### **2.2.1 Player input**
 
+    Player is able to trigger the following inputs:
+        - Move forward (default Z)
+        - Move Left (default Q)
+        - Move Backward (default S)
+        - Move Right (default D)
+        - Jump (default Space)
+        - Crouch (Default LeftCtrl)
+        - Interact with elements (default E)
+        - Sprint (defa ult Maj)
+        - Change weapon (default 1, 2, 3)
+        - Shoot/Attack with weapon (default LeftClick)
+
 #### **2.2.2 Animations**
+
+#### **2.2.3 Weapons**
+
+    Three differents weapons available:
+        - Riffle gun
+        - Pistol
+        - Metal pipe
+    
+    Players can loot magazines for their weapons.
+    Players are able to reload a weapon ONLY IF magazines in inventory.
+    Players cannot shoot while running.
 
 ### **2.3 AI Behaviour**
 
