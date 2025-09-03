@@ -1,6 +1,7 @@
 # **ACCEPTANCE TEST PLAN – PITCH DARK**
 
 ## **1. Core Functionalities for Beta Version**
+
 Below are the essential features that must be available for beta testing.
 
 | **Feature Name**  | **Description** | **Priority (High/Medium/Low)** |
@@ -107,7 +108,21 @@ Below are the essential features that must be available for beta testing.
         - Change weapon (default 1, 2, 3)
         - Shoot/Attack with weapon (default LeftClick)
 
-#### **2.2.2 Animations**
+#### **2.2.2 Feedback**
+
+    The game provides clear and responsive feedback in the following areas:
+        - Button Interactions:
+            - Visual and/or audio cues are triggered when any button is hovered over, pressed, or released.
+            - Disabled buttons are visually distinct.
+        - Player Actions:
+            - Immediate feedback is given for actions such as movement, jumping, shooting, interacting, or taking damage (e.g., sound effects, screen shake, UI indicators).
+            - Health and status changes are clearly communicated via the HUD.
+        - Quest Progression:
+            - Notifications or UI updates inform the player of quest objectives, progress, and completion.
+            - Errors or failed objectives are clearly indicated.
+        - Mini Games:
+            - Success, failure, and progress within mini games are communicated through visual and/or audio feedback.
+            - Instructions and results are clearly displayed to the player.
 
 #### **2.2.3 Weapons**
 
@@ -141,6 +156,7 @@ Below are the essential features that must be available for beta testing.
 ---
 
 ## **3. Success Criteria**
+
 The following criteria will be used to determine the success of the beta version.
 
 | **Criterion** | **Description** | **Threshold for Success** |
@@ -165,6 +181,7 @@ The following criteria will be used to determine the success of the beta version
 ---
 
 ## **5. Deliverables & Format**
+
 The beta version will include:
 
 - Playable introduction sequence
