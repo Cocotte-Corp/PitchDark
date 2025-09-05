@@ -1,6 +1,8 @@
 # **ACCEPTANCE TEST PLAN – PITCH DARK**
 
-## **1 Test Objective**
+## **1. Test Objective**
+
+### **1.1 Global resume**
 
 Below are the essential features that must be available for beta testing.
 
@@ -14,13 +16,31 @@ Below are the essential features that must be available for beta testing.
 
 ---
 
-## **1.2 Scope of testing**
+### **1.2 Scope of testing**
 
-/*to be done*/
+The beta testing scope will focus on core gameplay validation and system stability. Specifically:
+
+- Platform & Environment
+
+    - PC with Windows OS
+    - Distributed via Steam
+    - Multiplayer support for 2–4 players
+
+- Core Features
+    - Multiplayer session creation, joining, and synchronization
+    - AI navigation, combat behavior, and perception improvements
+    - Weapon handling, reload mechanics, and utility variations
+    - Interaction with new enemy types and mission objectives
+
+- Non-Included Features (Out of Scope for Beta)
+    - Full campaign storyline beyond Mission 2
+    - Endgame content (advanced missions, bosses)
+    - Advanced performance optimization and polish
+    - Cosmetic systems (skins, customization)
 
 ---
 
-## **1.3 Overview**
+### **1.3 Overview**
 
 The beta version will include:
 
@@ -34,13 +54,25 @@ The beta version will include:
 
 ---
 
-## **Assumptions/constraints**
+## **2. Assumptions/constraints**
 
-/*to be done*/
+### **2.1 Assumptions**
+
+- Testers will have access to a built version of the game
+- Testers will have stable internet connections to support multiplayer sessions
+- A limited ammount of content will be playable
+- Testers are expected to provide structured feedback through designated channels (bug tracker, feedback forms, or communication platform).
+
+### **2.2 Constraints**
+
+- Some minor bugs might occur during testing due to compilation errors
+- Multiplayer synchronization might not be precise, as the server used is public
+- The game might have some performance issue depending on the configuration
+- AI behaviors and mission objectives may not reflect final design balance or polish.
 
 ---
 
-## **4. Known Issues & Limitations**
+## **3. Known Issues & Limitations**
 
 | **Issue** | **Description** | **Impact** | **Planned Fix? (Yes/No)** |
 |----------|---------------|----------|----------------|
@@ -50,9 +82,7 @@ The beta version will include:
 
 ---
 
-## **Software requierement**
-
-## System Requirements
+## **4. Software requierement**
 
 ### Minimum
 - **Requires a 64-bit processor and operating system**
@@ -77,15 +107,20 @@ The beta version will include:
 
 ---
 
-## **Environlental Needs**
+## **5. Environmental Needs**
 
-/*to be done*/
+Global needs:
+- Computer with requirements (see above)
+
+Multiplayer:
+- Steam with an account on computer
+- 2-4 players
 
 ---
 
-## **Testing procedure**
+## **6. Testing procedure**
 
-### **2.1 Main menu**
+### **6.1 Main menu**
 
     Create Lobby Button:
         A Create Lobby button is visible on the main menu.
@@ -117,7 +152,7 @@ The beta version will include:
         Confirming closes the game application.
         Cancelling returns the player to the main menu.
 
-#### **2.1.1 Settings**
+#### **6.1.1 Settings**
 
     Visual Parameters:
         The player can open the Options → Video menu.
@@ -137,7 +172,7 @@ The beta version will include:
         The player can restore defaults at any time.
         Settings are saved and remain active after restarting the game.
 
-#### **2.1.2 Lobby**
+#### **6.1.2 Lobby**
 
     Player List:
         The lobby displays a list of all connected players.
@@ -159,9 +194,9 @@ The beta version will include:
         The lobby updates in real-time when players join, leave, or change status.
         Error handling is provided (e.g., if the host starts the game but a player disconnects at the same moment).
 
-### **2.2 Player behaviour**
+### **6.2 Player behaviour**
 
-#### **2.2.1 Player input**
+#### **6.2.1 Player input**
 
     Movement Controls:
         Move Forward → Default: Z
@@ -201,7 +236,7 @@ The beta version will include:
         Input conflicts are handled gracefully (e.g., pressing crouch + sprint).
         The system provides feedback when an action cannot be performed (e.g., no ammo, blocked path).lt LeftClick)
 
-#### **2.2.2 Feedback**
+#### **6.2.2 Feedback**
 
     The game provides clear and responsive feedback in the following areas:
         - Button Interactions:
@@ -217,7 +252,7 @@ The beta version will include:
             - Success, failure, and progress within mini games are communicated through visual and/or audio feedback.
             - Instructions and results are clearly displayed to the player.
 
-#### **2.2.3 Weapons**
+#### **6.2.3 Weapons**
 
     Available Weapons:
         Players have access to three weapon types:
@@ -250,11 +285,13 @@ The beta version will include:
         All actions (shooting, reloading, switching) include animations and sound feedback.
         The system prevents exploits such as infinite ammo, skipping reload, or shooting without delay.
 
-### **2.3 AI Behaviour**
+### **6.3 AI Behaviour**
 
-### **2.4 Multiplayer functionalities**
+TBD
 
-### **2.4.1 Lobby functionalities**
+### **6.4 Multiplayer functionalities**
+
+### **6.4.1 Lobby functionalities**
 
     Create a Lobby:
         A player can select “Create Lobby” from the menu.
@@ -288,7 +325,7 @@ The beta version will include:
         All players are marked as Ready.
         Once started, all players are transitioned from the lobby to the game session simultaneously.
 
-### **2.4.2 In-Game features**
+### **6.4.2 In-Game features**
 
     Player Visibility:
         While alive, players can observe the behaviors and actions of other players (e.g., movement, shooting, interacting).
@@ -304,13 +341,16 @@ The beta version will include:
 
 ---
 
-## **Feature not to be tested**
+## **7. Feature not to be tested**
 
-/*to be done*/
+- Character customization
+- Room settings
+- Sliding menu
+
 
 ---
 
-## **Project Information**
+## **8. Project Information**
 
 - **Project Name:** Pitch Dark
 - **Team Members:** Amaury Bariety, Bastien Rodrigues, Cyprien Nguyen-Van-Vien, Damien Benais-Captal and Viktor Bruggeman
