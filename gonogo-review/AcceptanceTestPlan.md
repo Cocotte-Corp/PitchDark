@@ -7,11 +7,41 @@ Below are the essential features that must be available for beta testing.
 | **Feature Name**   | **Description**                                                                                 | **Priority (High/Medium/Low)** |
 |--------------------|-------------------------------------------------------------------------------------------------|--------------------------------|
 | Multiplayer        | Enable multiple players to join the same session, with synchronized movement, interaction, and basic co-op functionality. | High                           |
-| AI Expansion     | Upgrade AI logic to create more dynamic and reactive behaviors. This includes: <br> - **Navigation & Pathfinding:** Smarter movement through complex environments, avoiding obstacles and using cover. <br> - **Combat Behavior:** Enemies adapt to player tactics, flank, retreat when damaged, and coordinate in groups. <br> - **Environmental Interaction:** AI can manipulate certain objects (e.g., opening doors, triggering traps, or altering light sources). <br> - **Perception System:** Improved detection using sight, sound, and environmental cues for more immersive stealth and combat encounters. <br> - **HUD Pixelization Feedback:** When AI interferes with systems, the HUD partially pixelates, simulating environmental distortion and player disorientation. | High |                          |
+| AI Expansion     | Upgrad e AI logic to create more dynamic and reactive behaviors. This includes: <br> - **Navigation & Pathfinding:** Smarter movement through complex environments, avoiding obstacles and using cover. <br> - **Combat Behavior:** Enemies adapt to player tactics, flank, retreat when damaged, and coordinate in groups. <br> - **Environmental Interaction:** AI can manipulate certain objects (e.g., opening doors, triggering traps, or altering light sources). <br> - **Perception System:** Improved detection using sight, sound, and environmental cues for more immersive stealth and combat encounters. <br> - **HUD Pixelization Feedback:** When AI interferes with systems, the HUD partially pixelates, simulating environmental distortion and player disorientation. | High |                          |
 | New Weapons        | Introduce a wider range of firearms and tools, each with unique mechanics (e.g., damage types, reload systems, or utility functions). | High                           |
 | Enemy Variety      | Add new enemy types with distinct attack patterns, abilities, and behaviors to diversify combat encounters. | Medium                         |
 | Missions           | Expand mission content with tutorials, story-driven objectives, and exploration-focused tasks to guide player progression. | Medium                         |
+---
 
+## **1.1 Test Objective**
+
+---
+
+## **1.2 Scope of testing**
+
+---
+
+## **1.3 Overview**
+
+---
+
+## **Assumptions/constraints**
+
+---
+
+## **Software requierement**
+
+---
+
+## **Environlental Needs**
+
+---
+
+## **Feature not to be tested**
+
+---
+
+## **Testing procedure**
 
 ---
 
