@@ -52,7 +52,28 @@ The beta version will include:
 
 ## **Software requierement**
 
-/*to be done*/
+## System Requirements
+
+### Minimum
+- **Requires a 64-bit processor and operating system**
+- **OS:** Windows 10  
+- **Processor:** Intel Core i7-8700K / AMD Ryzen 5 1600X  
+- **Memory:** 8 GB RAM  
+- **Graphics:** NVIDIA GeForce GTX 1060 6 GB / AMD Radeon RX 5600 XT 6 GB / Intel Arc A380 6 GB  
+- **DirectX:** Version 12  
+- **Storage:** 55 GB available space  
+- **Additional Notes:** SSD required. Minimum specs allow gameplay at 1080p 30FPS with Low settings.  
+
+### Recommended
+- **Requires a 64-bit processor and operating system**  
+- **OS:** Windows 11  
+- **Processor:** Intel Core i7-12700K / AMD Ryzen 7 5800X  
+- **Memory:** 16 GB RAM  
+- **Graphics:** NVIDIA GeForce RTX 3060 Ti 8 GB / AMD Radeon RX 6800 XT 16 GB  
+- **DirectX:** Version 12  
+- **Storage:** 55 GB available space  
+- **Additional Notes:** SSD required. Recommended specs allow gameplay at 1080p 60FPS with High settings.  
+
 
 ---
 
