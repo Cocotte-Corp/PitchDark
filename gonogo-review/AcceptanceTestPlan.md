@@ -1,6 +1,6 @@
 # **ACCEPTANCE TEST PLAN – PITCH DARK**
 
-## **1. Core Functionalities for Beta Version**
+## **1 Test Objective**
 
 Below are the essential features that must be available for beta testing.
 
@@ -11,43 +11,58 @@ Below are the essential features that must be available for beta testing.
 | New Weapons        | Introduce a wider range of firearms and tools, each with unique mechanics (e.g., damage types, reload systems, or utility functions). | High                           |
 | Enemy Variety      | Add new enemy types with distinct attack patterns, abilities, and behaviors to diversify combat encounters. | Medium                         |
 | Missions           | Expand mission content with tutorials, story-driven objectives, and exploration-focused tasks to guide player progression. | Medium                         |
----
-
-## **1.1 Test Objective**
 
 ---
 
 ## **1.2 Scope of testing**
 
+/*to be done*/
+
 ---
 
 ## **1.3 Overview**
+
+The beta version will include:
+
+- Playable introduction sequence
+- Complete Mission 1 with all objectives
+- Partial Mission 2 to demonstrate exploration mechanics
+- At least one different weapon
+- One fully implemented Réplicant enemy type
+- Core Fog mechanics with visual and gameplay effects
+- Basic UI elements including health and objective tracking
 
 ---
 
 ## **Assumptions/constraints**
 
+/*to be done*/
+
+---
+
+## **4. Known Issues & Limitations**
+
+| **Issue** | **Description** | **Impact** | **Planned Fix? (Yes/No)** |
+|----------|---------------|----------|----------------|
+| Loading Times | Loading between areas may be longer than desired | Medium | Yes |
+| Combat Balance | Weapon effectiveness against enemies may need adjustment | Medium | Yes |
+| Fog Visual Effects | Some Fog effects may not be optimized for all hardware | Medium | Yes |
+
 ---
 
 ## **Software requierement**
+
+/*to be done*/
 
 ---
 
 ## **Environlental Needs**
 
----
-
-## **Feature not to be tested**
+/*to be done*/
 
 ---
 
 ## **Testing procedure**
-
----
-
-## **2. Current expected features**
-
----
 
 ### **2.1 Main menu**
 
@@ -268,42 +283,9 @@ Below are the essential features that must be available for beta testing.
 
 ---
 
-## **3. Success Criteria**
+## **Feature not to be tested**
 
-The following criteria will be used to determine the success of the beta version.
-
-| **Criterion** | **Description** | **Threshold for Success** |
-|--------------|---------------|------------------------|
-| Completion Rate | Players can complete Mission 1 without getting stuck | 80% of testers |
-| Atmosphere | Players report the game atmosphere as "tense" or "scary" | 70% of testers |
-| Mechanics Understanding | Players understand core mechanics after first mission | 75% of testers |
-| Technical Performance | Frame rate maintains target performance | At least 30 FPS on target hardware |
-| Bug Frequency | Game-breaking bugs are rare | Less than 10% of testers encounter any |
-| Player Interest | Players express interest in the full game | 70% of testers |
-
----
-
-## **4. Known Issues & Limitations**
-
-| **Issue** | **Description** | **Impact** | **Planned Fix? (Yes/No)** |
-|----------|---------------|----------|----------------|
-| Loading Times | Loading between areas may be longer than desired | Medium | Yes |
-| Combat Balance | Weapon effectiveness against enemies may need adjustment | Medium | Yes |
-| Fog Visual Effects | Some Fog effects may not be optimized for all hardware | Medium | Yes |
-
----
-
-## **5. Deliverables & Format**
-
-The beta version will include:
-
-- Playable introduction sequence
-- Complete Mission 1 with all objectives
-- Partial Mission 2 to demonstrate exploration mechanics
-- At least one different weapon
-- One fully implemented Réplicant enemy type
-- Core Fog mechanics with visual and gameplay effects
-- Basic UI elements including health and objective tracking
+/*to be done*/
 
 ---
 
