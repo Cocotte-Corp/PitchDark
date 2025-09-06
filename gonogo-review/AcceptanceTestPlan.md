@@ -120,7 +120,7 @@ Multiplayer:
 
 ## **6. Test scenarios**
 
-### **6.1 Main menu**
+### **6.1 Main Menu**
 
 #### **6.1.1 Create Lobby Button**
 
@@ -167,49 +167,65 @@ Multiplayer:
 | Prerequisites | Game launched, in the main menu |
 | Steps | When pressed, it asks the player to confirm quitting. Confirming closes the game application Cancelling returns the player to the main menu. |
 
-#### **6.1.1 Settings**
+### **6.2 Settings Menu**
 
-    Visual Parameters:
-        The player can open the Options → Video menu.
-        The player can change resolution and graphics quality settings.
-        Changes are applied immediately or after confirmation.
-        Settings are saved and remain active after restarting the game.
+#### **6.2.1 Visual parameters**
 
-    Audio Parameters:
-        The player can open the Options → Audio menu.
-        The player can adjust master volume, music volume, and sound effects volume.
-        Changes are applied in real-time.
-        Settings are saved and remain active after restarting the game.
+| **Scenario** | **Description** |
+|----------|---------------|
+| Functionnality | Visual parameters |
+| Objective | Change visual settings |
+| Prerequisites | Whether in main menu or in-game, Settings menu open |
+| Steps | The player can open the Options → Video menu. The player can change resolution and graphics quality settings. Changes are applied immediately or after confirmation. Settings are saved and remain active after restarting the game. |
 
-    Key Bindings:
-        The player can open the Options → Keybinds menu.
-        The player can rebind movement keys, actions, and other Keybinds.
-        The player can restore defaults at any time.
-        Settings are saved and remain active after restarting the game.
+#### **6.2.1 Audio parameters**
 
-#### **6.1.2 Lobby**
+| **Scenario** | **Description** |
+|----------|---------------|
+| Functionnality | Audio parameters |
+| Objective | Change audio settings |
+| Prerequisites | Whether in main menu or in-game, Settings menu open |
+| Steps | The player can open the Options → Audio menu. The player can adjust master volume, music volume, and sound effects volume. Changes are applied in real-time. Settings are saved and remain active after restarting the game. |
 
-    Player List:
-        The lobby displays a list of all connected players.
-        Each player’s username and profile picture are visible.
-        The host is clearly identified in the list.
-        Ready Status
-        Each player can toggle their Ready / Not Ready status.
-        The current status is visible to all players in the lobby.
-        The lobby prevents the game from starting until minimum requirements are met (e.g., minimum players, all players ready).
+#### **6.2.3 Keybind parameters**
 
-    Host Controls:
-        The host has the ability to start the game once all conditions are met.
-        The host can see which players are ready and which are not.
-        If a player disconnects or leaves, the lobby updates immediately.
-        If the host leaves, host migration occurs (if supported) or the lobby closes.
+| **Scenario** | **Description** |
+|----------|---------------|
+| Functionnality | Keybind parameters |
+| Objective | Change Keybinds |
+| Prerequisites | Whether in main menu or in-game, Settings menu open |
+| Steps | The player can open the Options → Keybinds menu. The player can rebind movement keys, actions, and other Keybinds. The player can restore defaults at any time. Settings are saved and remain active after restarting the game. |
 
-    General Behavior:
-        Players can leave the lobby at any time and return to the main menu.
-        The lobby updates in real-time when players join, leave, or change status.
-        Error handling is provided (e.g., if the host starts the game but a player disconnects at the same moment).
+#### **6.3 Lobby**
 
-### **6.2 Player behaviour**
+#### **6.3.1 Player list**
+
+| **Scenario** | **Description** |
+|----------|---------------|
+| Functionnality | Player list |
+| Objective | Get players info and status on lobby |
+| Prerequisites | In a lobby with players |
+| Steps | The lobby displays a list of all connected players. Each player’s username and profile picture are visible. The host is clearly identified in the list. Each player can toggle their Ready / Not Ready status. The current status is visible to all players in the lobby. The lobby prevents the game from starting until minimum requirements are met (e.g., minimum players, all players ready). |
+
+#### **6.3.2 Host privileges**
+
+| **Scenario** | **Description** |
+|----------|---------------|
+| Functionnality | Keybind parameters |
+| Objective | Start the game |
+| Prerequisites | In a lobby with players, being the host |
+| Steps | The host has the ability to start the game once all conditions are met. The host can see which players are ready and which are not. If a player disconnects or leaves, the lobby updates immediately. If the host leaves, host migration occurs (if supported) or the lobby closes. |
+
+#### **6.3.3 All players privileges**
+
+| **Scenario** | **Description** |
+|----------|---------------|
+| Functionnality | All players privileges |
+| Objective | Various |
+| Prerequisites | In a lobby with players |
+| Steps | Players can leave the lobby at any time and return to the main menu. The lobby updates in real-time when players join, leave, or change status. Error handling is provided (e.g., if the host starts the game but a player disconnects at the same moment). |
+
+### **6.4 Player behaviour**
 
 #### **6.2.1 Player input**
 
@@ -300,47 +316,11 @@ Multiplayer:
         All actions (shooting, reloading, switching) include animations and sound feedback.
         The system prevents exploits such as infinite ammo, skipping reload, or shooting without delay.
 
-### **6.3 AI Behaviour**
+### **6.5 AI Behaviour**
 
 TBD
 
-### **6.4 Multiplayer functionalities**
-
-### **6.4.1 Lobby functionalities**
-
-    Create a Lobby:
-        A player can select “Create Lobby” from the menu.
-        The system generates a new lobby instance with configurable parameters (name, max players, visibility).
-        The player who created the lobby is automatically assigned as the host.
-        Destroy a Lobby
-        The host can close/destroy the lobby at any time.
-        If destroyed, all connected players are returned to the main menu with a message explaining the lobby was closed.
-        If supported, host migration occurs (another player becomes the host).
-
-    Join a Lobby:
-        Players can browse a list of available lobbies.
-        Players can join a selected lobby if it is open and not full.
-        If the lobby is full or closed, a notification is displayed.
-        Leave a Lobby
-        Any player (host or guest) can leave the lobby at any time.
-        Leaving redirects the player back to the main menu.
-        If the host leaves, the lobby is either destroyed or migrated depending on design choice.
-
-    Lobby Chat:
-        Players inside the lobby can send text messages.
-        Messages are visible in real-time to all other connected players.
-        Each message is tagged with the sender’s username.
-        Offensive or disruptive messages can be managed with a filter or moderation system (optional).
-
-    Game Launch:
-        Each player can toggle their Ready/Not Ready status.
-        The host sees the status of all players.
-        The game can only be launched when:
-        The minimum player count is reached.
-        All players are marked as Ready.
-        Once started, all players are transitioned from the lobby to the game session simultaneously.
-
-### **6.4.2 In-Game features**
+### **6.6 In-Game features**
 
     Player Visibility:
         While alive, players can observe the behaviors and actions of other players (e.g., movement, shooting, interacting).
