@@ -1,5 +1,7 @@
 # **ACCEPTANCE TEST PLAN – PITCH DARK**
 
+Pitch Dark is a multiplayer fps horror game in a sci-fi environment where players need to achieve tasks in order to complete missions and try to survive various dangers, such as enemies and the Pitch, a dangerous fog that needs to be avoided. The game targets players who enjoy sci-fi horror experiences, combining tense multiplayer action with atmospheric survival gameplay.
+
 ## Table of Contents
 - [1. Test Objective](#1-test-objective)
     - [1.1 Global resume](#11-global-resume)
