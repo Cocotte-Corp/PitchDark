@@ -227,94 +227,85 @@ Multiplayer:
 
 ### **6.4 Player behaviour**
 
-#### **6.2.1 Player input**
+#### **6.4.1 Player input**
 
-    Movement Controls:
-        Move Forward → Default: Z
-        Move Left → Default: Q
-        Move Backward → Default: S
-        Move Right → Default: D
-        Movement responds immediately to input and stops when the key is released.
-        Diagonal movement is possible by combining keys (e.g., forward + left).
-        Traversal Controls
-        Jump → Default: Space
-        Triggers the jump animation and vertical movement.
-        Jump is only possible when on the ground.
-        Crouch → Default: LeftCtrl
-        Reduces player height and movement speed.
-        Used to access low areas or stealth gameplay.
-        Toggles or hold behavior depending on options.
-        Sprint → Default: Maj (Shift)
-        Increases movement speed while held.
-        Disables shooting during sprinting (see weapons system).
-        Interaction Controls
-        Interact with elements → Default: E
-        Allows picking up items, opening doors, pressing buttons, etc.
-        Interaction is context-sensitive and works only when near an interactable element.
+| **Scenario** | **Description** |
+|--------------|-----------------|
+| **Functionality** | Movement Controls |
+| **Objective** | Make the player move |
+| **Prerequisites** | In a game |
+| **Input list** |<ul> <li> **Move Forward** → Default: Z</li> <li> **Move Left** → Default: Q </li> <li> **Move Backward** → Default: S </li> <li> **Move Right** → Default: D </li><li>**Jump** → Default: Space</li><li>**Crouch** → Default: LeftCtrl</li><li>**Sprint** → Default: Maj (Shift)</li><li>**Interact with elements** → Default: E</li><li>**Shoot / Attack with weapon** → Default: Lmb (or equivalent)</li><li>**Change Weapon** → Default: 1, 2, 3</li>
+| **General behaviour** | <ul><li> Movement responds immediately to input and stops when the key is released.</li><li>Diagonal movement is possible by combining keys (e.g., forward + left). </li><li>Can only jump while on the ground.</li><li>Can only sprint while moving forward.</li><li>Controls respond with minimal input latency.</li><li>Input conflicts are handled (e.g., pressing crouch + sprint).</li><li>The system provides feedback when an action cannot be performed (e.g., no ammo, blocked path).lt LeftClick)</li></ul>
 
-    Combat Controls:
-        Shoot / Attack with weapon → Default: Left Mouse Button (or equivalent)
-        Fire the equipped ranged weapon (if ammo is available).
-        Swing or strike with melee weapon if equipped.
-        Triggered action is blocked if conditions are not met (e.g., sprinting, no ammo).
-        Change Weapon → Default: 1, 2, 3
-        Instantly or gradually switches between available weapons (rifle, pistol, metal pipe).
-        Feedback (UI + animation) confirms the weapon swap.
+#### **6.4.2 Feedback**
 
-    General Requirements:
-        All inputs must be rebindable in the Options → Controls menu.
-        Controls respond with minimal input latency.
-        Input conflicts are handled gracefully (e.g., pressing crouch + sprint).
-        The system provides feedback when an action cannot be performed (e.g., no ammo, blocked path).lt LeftClick)
+The game provides clear and responsive feedback in the following areas:
 
-#### **6.2.2 Feedback**
 
-    The game provides clear and responsive feedback in the following areas:
-        - Button Interactions:
-            - Visual and/or audio cues are triggered when any button is hovered over, pressed, or released.
-            - Disabled buttons are visually distinct.
-        - Player Actions:
-            - Immediate feedback is given for actions such as movement, jumping, shooting, interacting, or taking damage (e.g., sound effects, screen shake, UI indicators).
-            - Health and status changes are clearly communicated via the HUD.
-        - Quest Progression:
-            - Notifications or UI updates inform the player of quest objectives, progress, and completion.
-            - Errors or failed objectives are clearly indicated.
-        - Mini Games:
-            - Success, failure, and progress within mini games are communicated through visual and/or audio feedback.
-            - Instructions and results are clearly displayed to the player.
+| **Scenario** | **Description** |
+|----------|---------------|
+| Functionnality | Button Interactions |
+| Behaviour | <ul><li>Visual and/or audio cues are triggered when any buttonis hovered over, pressed, orreleased.</li><li>Disabled buttons arevisually distinct</li></ul>
 
-#### **6.2.3 Weapons**
+---
 
-    Available Weapons:
-        Players have access to three weapon types:
-        Rifle (automatic fire, high damage, slower reload).
-        Pistol (semi-automatic, faster reload, lower damage).
-        Metal Pipe (melee weapon, unlimited use, no ammunition required).
-        Each weapon has unique stats (damage, fire rate, range, reload speed).
-        Weapons can be swapped in-game depending on availability and inventory.
+| **Scenario** | **Description** |
+|----------|---------------|
+| Functionnality | Player Actions |
+| Behaviour | <ul><li>Immediate feedback is given for actions such as movement,jumping, shooting,interacting, or taking damage(e.g., sound effects, screenshake, UI indicators).</li><li>Health and status changes are clearly communicated viathe HUD.</li></ul>
 
-    Looting Ammunition:
-        Players can find and collect magazines for their firearms (rifle and pistol).
-        Looted magazines are stored in the inventory system.
-        Ammunition is consumed when firing and decreases from the inventory count.
-        Magazines must match the weapon type (e.g., pistol magazines cannot be used in rifles).
+---
 
-    Reloading:
-        A weapon can only be reloaded if the player has at least one magazine in inventory.
-        Reloading consumes one magazine and refills the weapon’s ammo clip.
-        If no magazines are available, the reload action fails and a “No ammo” feedback is displayed.
-        Reload animations and timing differ per weapon type (longer for rifle, shorter for pistol).
+| **Scenario** | **Description** |
+|----------|---------------|
+| Functionnality | Quest Progression |
+| Behaviour | <ul><li>Notifications or UI updates inform the player of quest objectives, progress, andcompletion.</li><li>Errors or failed objectives are clearly indicated</li></ul>
 
-    Shooting Restrictions:
-        Players cannot shoot while running.
-        Attempting to fire while sprinting provides feedback (e.g., click sound, UI indicator).
-        Players must stop sprinting (stand still or walk) before firing.
-        Melee attacks (metal pipe) can still be used while running.
+---
 
-    General Behavior:
-        Weapon switching is instantaneous or delayed depending on design (swap animation).
-        All actions (shooting, reloading, switching) include animations and sound feedback.
-        The system prevents exploits such as infinite ammo, skipping reload, or shooting without delay.
+| **Scenario** | **Description** |
+|----------|---------------|
+| Functionnality | Mini Games |
+| Behaviour | <ul><li>Success, failure, and progress within mini gamesare communicated through visual and/or audio feedback..</li><li>Instructions and results are clearly displayed to the player.</li></ul>
+
+#### **6.4.3 Weapons**
+
+Each weapon has unique stats (damage, fire rate, range, reload speed).
+Below is a list of available weapons:
+
+| **Weapon** | **Description** |
+|----------|---------------|
+| Rifle | automatic fire, high damage, slower reload |
+| Pistol | semi-automatic, faster reload, lower damage |
+| Metal Pipe | melee weapon, unlimited use, no ammunition required |
+
+---
+
+| **Scenario** | **Description** |
+|----------|---------------|
+| Functionnality | Ammunition |
+| Objective | Loot ammunition |
+| Prerequisites | In a game |
+| Steps | Players can find and collect magazines for their firearms (rifle and pistol). Looted magazines are stored in the inventory system. Ammunition is consumed when firing and decreases from the inventory count. Magazines must match the weapon type (e.g., pistol magazines cannot be used in rifles). |
+
+---
+
+| **Scenario** | **Description** |
+|----------|---------------|
+| Functionnality | Reloading |
+| Objective | Reloading the weapon |
+| Prerequisites | In a game, weapon in hand |
+| Steps | A weapon can only be reloaded if the player has at least one magazine in inventory. Reloading consumes one magazine and refills the weapon’s ammo clip. If no magazines are available, the reload action fails and a “No ammo” feedback is displayed. Reload animations and timing differ per weapon type (longer for rifle, shorter for pistol). |
+
+---
+
+- Players cannot shoot while running.
+- Attempting to fire while sprinting provides feedback (e.g., click sound, UI indicator).
+- Players must stop sprinting (stand still or walk) before firing.
+- Melee attacks (metal pipe) can still be used while running.
+- Weapon switching is instantaneous or delayed depending on design (swap animation).
+- All actions (shooting, reloading, switching) include animations and sound feedback.
+- The system prevents exploits such as infinite ammo, skipping reload, or shooting without delay.
 
 ### **6.5 AI Behaviour**
 
