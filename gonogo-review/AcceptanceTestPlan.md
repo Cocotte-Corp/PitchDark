@@ -401,19 +401,13 @@ Below is a list of available weapons:
 | Prerequisites | Enemy health reduced to zero                                                                                            |
 | Steps         | AI plays death animation, emits sound, and despawns after a delay. Death may trigger item drops or mission progression. |
 
-### **6.6 In-Game features**
+### **6.6 In-Game Multiplayer**
 
-    Player Visibility:
-        While alive, players can observe the behaviors and actions of other players (e.g., movement, shooting, interacting).
-        Animations and actions are synchronized across clients to ensure consistency (e.g., when a player reloads, others see it).
-        The system ensures that visible actions are accurate and updated in real-time to maintain immersion.
+| Feature                | Description |
+|-------------------------|-------------|
+| **Player Visibility**  | - While alive, players can observe others’ actions (movement, shooting, interacting).<br> - Animations and actions are synchronized across clients (e.g., reloads are visible).<br> - Actions are updated in real time for immersion. |
+| **Spectator Mode (Dead Players)** | - When dead, players enter Spectator Mode.<br> - Can watch teammates’ POVs.<br> - Supports manual switching or auto-follow.<br> - Updates in real time with active players’ movements and actions.<br> - Spectators cannot influence gameplay (no interaction, no unfair comms). |
 
-    Spectator Mode (Dead Players):
-        When a player dies, they enter Spectator Mode.
-        In this mode, the dead player can watch other players’ points of view.
-        The system cycles through perspectives of alive teammates (manual switch or auto-follow).
-        The spectator view updates in real time with the active player’s movements, aiming, and actions.
-        Spectators cannot influence gameplay (no interaction, no communication that provides unfair advantage).
 
 ---
 
