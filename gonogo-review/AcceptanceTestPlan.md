@@ -330,7 +330,76 @@ Below is a list of available weapons:
 
 ### **6.5 AI Behaviour**
 
-TBD
+| **Scenario**  | **Description**                                                                                               |
+| ------------- | ------------------------------------------------------------------------------------------------------------- |
+| Functionality | Enemy patrol                                                                                                  |
+| Objective     | Make AI follow a predefined or random route                                                                   |
+| Prerequisites | Enemy spawned in game world                                                                                   |
+| Steps         | When idle, AI follows a patrol path. If the player is not detected, the AI continues patrolling according to parameters (loop, back and forth, stay). |
+
+| **Scenario**  | **Description**                                                                                                                                      |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Functionality | Enemy vision                                                                                                                                         |
+| Objective     | Detect player presence via line of sight                                                                                                             |
+| Prerequisites | Player enters AI’s field of view                                                                                                                     |
+| Steps         | If the player is visible within AI’s detection cone and range, AI becomes alerted and initiates pursuit. Obstacles can block detection. |
+
+| **Scenario**  | **Description**                                                                                                |
+| ------------- | -------------------------------------------------------------------------------------------------------------- |
+| Functionality | Enemy hearing                                                                                                  |
+| Objective     | Detect player presence through sound                                                                           |
+| Prerequisites | Player produces noise (footsteps, gunfire, interaction) within AI’s hearing radius                             |
+| Steps         | AI reacts to the sound by moving toward the source. If the player is confirmed visually or by contact, AI initiates pursuit. |
+
+| **Scenario**  | **Description**                                                                                                                             |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Functionality | Enemy chase                                                                                                                                 |
+| Objective     | Make AI pursue detected players                                                                                                             |
+| Prerequisites | Player detected through sight or hearing                                                                                                    |
+| Steps         | AI increases movement speed, navigates obstacles, and follows the player. Chase continues until line of sight is broken for a set duration. |
+
+| **Scenario**  | **Description**                                                                                            |
+| ------------- | ---------------------------------------------------------------------------------------------------------- |
+| Functionality | Enemy attack                                                                                               |
+| Objective     | Damage the player when in range                                                                            |
+| Prerequisites | Player in melee range of AI                                                                                |
+| Steps         | AI performs attack animation and applies damage if successful. Cooldown prevents repeated instant attacks. |
+
+| **Scenario**  | **Description**                                                                                      |
+| ------------- | ---------------------------------------------------------------------------------------------------- |
+| Functionality | Enemy opening doors                                                                                  |
+| Objective     | Prevent safe zones behind closed doors                                                               |
+| Prerequisites | AI chasing or patrolling, door in path                                                               |
+| Steps         | AI interacts with door to open it. If locked, AI may attempt forced entry (depending on enemy type). |
+
+
+| **Scenario**  | **Description**                                                                               |
+| ------------- | --------------------------------------------------------------------------------------------- |
+| Functionality | Enemy spawn                                                                                   |
+| Objective     | Introduce enemies dynamically                                                                 |
+| Prerequisites | Triggered event                                                                               |
+| Steps         | AI spawns at designated or randomized points. Spawn can be immediate, timed, or event-driven. |
+
+| **Scenario**  | **Description**                                                                                                                               |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Functionality | Enemy sounds                                                                                                                                  |
+| Objective     | Add immersion and indirect feedback                                                                                                           |
+| Prerequisites | Enemy active in game                                                                                                                          |
+| Steps         | AI emits audio cues such as footsteps, growls, or screams. These can alert players and indicate enemy state (patrolling, alerted, attacking). |
+
+| **Scenario**  | **Description**                                                                         |
+| ------------- | --------------------------------------------------------------------------------------- |
+| Functionality | Enemy jumpscare                                                                         |
+| Objective     | Startle player through sudden scripted/dynamic event                                    |
+| Prerequisites | Trigger zone or scripted event                                                          |
+| Steps         | AI appears suddenly, with visual and/or audio cue. May transition into chase or attack. |
+
+| **Scenario**  | **Description**                                                                                                         |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Functionality | Enemy death                                                                                                             |
+| Objective     | Remove AI from gameplay upon defeat                                                                                     |
+| Prerequisites | Enemy health reduced to zero                                                                                            |
+| Steps         | AI plays death animation, emits sound, and despawns after a delay. Death may trigger item drops or mission progression. |
 
 ### **6.6 In-Game features**
 
