@@ -1,5 +1,26 @@
 # **ACCEPTANCE TEST PLAN – PITCH DARK**
 
+## Table of Contents
+- [1. Test Objective](#1-test-objective)
+    - [1.1 Global resume](#11-global-resume)
+    - [1.2 Scope of testing](#12-scope-of-testing)
+    - [1.3 Overview](#13-overview)
+- [2. Assumptions/constraints](#2-assumptionsconstraints)
+    - [2.1 Assumptions](#21-assumptions)
+    - [2.2 Constraints](#22-constraints)
+- [3. Known Issues & Limitations](#3-known-issues--limitations)
+- [4. Software requierement](#4-software-requierement)
+- [5. Environmental Needs](#5-environmental-needs)
+- [6. Test scenarios](#6-test-scenarios)
+    - [6.1 Main Menu](#61-main-menu)
+    - [6.2 Settings Menu](#62-settings-menu)
+    - [6.3 Lobby](#63-lobby)
+    - [6.4 Player behaviour](#64-player-behaviour)
+    - [6.5 AI Behaviour](#65-ai-behaviour)
+    - [6.6 In-Game features](#66-in-game-features)
+- [7. Feature not to be tested](#7-feature-not-to-be-tested)
+- [8. Project Information](#8-project-information)
+
 ## **1. Test Objective**
 
 ### **1.1 Global resume**
