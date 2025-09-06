@@ -118,39 +118,54 @@ Multiplayer:
 
 ---
 
-## **6. Testing procedure**
+## **6. Test scenarios**
 
 ### **6.1 Main menu**
 
-    Create Lobby Button:
-        A Create Lobby button is visible on the main menu.
-        When pressed, it opens a lobby creation interface.
-        The player can configure basic settings (e.g., lobby name, visibility, max players).
-        Pressing Confirm creates a lobby and the player is placed inside it as the host.
+#### **6.1.1 Create Lobby Button**
 
-    Join Lobby Button:
-        A Join Lobby button is visible on the main menu.
-        When pressed, it displays a list of available lobbies.
-        The player can select a lobby and join it successfully.
-        If a lobby is full or no longer available, an error message is displayed.
+| **Scenario** | **Description** |
+|----------|---------------|
+| Functionnality | Create lobby button |
+| Objective | Create a multiplayer lobby as the host |
+| Prerequisites | Game launched, in the main menu |
+| Steps | A Create Lobby button is visible on the main menu. When pressed, it opens a lobby creation interface. The player can configure basic settings (e.g., lobby name, visibility, max players). Pressing Confirm creates a lobby and the player is placed inside it as the host. |
 
-    Tutorial Button:
-        A Tutorial button is visible on the main menu.
-        When pressed, it starts the tutorial sequence.
-        The player is placed into the tutorial environment.
-        The tutorial can be exited back to the main menu at any time.
+#### **6.1.2 Join Lobby Button**
 
-    Options Button:
-        An Options button is visible on the main menu.
-        When pressed, it opens the options menu with categories (Video, Audio, Keybinds).
-        The player can change settings and confirm changes.
-        The player can return to the main menu from the options menu.
+| **Scenario** | **Description** |
+|----------|---------------|
+| Functionnality | Join lobby button |
+| Objective | Join an existing multiplayer lobby |
+| Prerequisites | Game launched, in the main menu, another player is hosting a lobby |
+| Steps | When pressing the button, a list of available lobbies is displayed. The player can select a lobby and join it successfully. If a lobby is full or no longer available, an error message is displayed. |
 
-    Quit Game Button:
-        A Quit button is visible on the main menu.
-        When pressed, it asks the player to confirm quitting.
-        Confirming closes the game application.
-        Cancelling returns the player to the main menu.
+#### **6.1.3 Tutorial Button**
+
+| **Scenario** | **Description** |
+|----------|---------------|
+| Functionnality | Tutorial button |
+| Objective | Start the tutorial |
+| Prerequisites | Game launched, in the main menu |
+| Steps | When pressed, it starts the tutorial sequence The player is placed into the tutorial environment. The tutorial can be exited back to the main menu at any time. |
+
+#### **6.1.4 Settings Button**
+
+| **Scenario** | **Description** |
+|----------|---------------|
+| Functionnality | Settings button |
+| Objective | Access the settings menu |
+| Prerequisites | Game launched, in the main menu |
+| Steps |When pressed, it opens the options menu with categories (Video, Audio, Keybinds). The player can change settings and confirm changes. The player can return to the main menu from the options menu. |
+
+#### **6.1.5 Quit Game Button**
+
+| **Scenario** | **Description** |
+|----------|---------------|
+| Functionnality | Quit Game button |
+| Objective | Quit the game |
+| Prerequisites | Game launched, in the main menu |
+| Steps | When pressed, it asks the player to confirm quitting. Confirming closes the game application Cancelling returns the player to the main menu. |
 
 #### **6.1.1 Settings**
 
