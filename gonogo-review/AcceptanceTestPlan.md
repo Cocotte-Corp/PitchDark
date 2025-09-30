@@ -145,7 +145,7 @@ Multiplayer:
 
 ### **6.1 Main Menu**
 
-#### **6.1.1 Create Lobby Button**
+#### **6.1.1 Create Room Button**
 
 | **Scenario** | **Description** |
 |----------|---------------|
@@ -154,7 +154,7 @@ Multiplayer:
 | Prerequisites | Game launched, in the main menu |
 | Steps | A Create Lobby button is visible on the main menu. When pressed, it opens a lobby creation interface. The player can configure basic settings (e.g., lobby name, visibility, max players). Pressing Confirm creates a lobby and the player is placed inside it as the host. |
 
-#### **6.1.2 Join Lobby Button**
+#### **6.1.2 Find Room Button**
 
 | **Scenario** | **Description** |
 |----------|---------------|
@@ -190,9 +190,22 @@ Multiplayer:
 | Prerequisites | Game launched, in the main menu |
 | Steps | When pressed, it asks the player to confirm quitting. Confirming closes the game application Cancelling returns the player to the main menu. |
 
-### **6.2 Tutorial Level**
+### **6.2 Lobby**
+#### **6.2.1 Lobby Requirements**
 
-#### **6.2.1 Tutorial Structure**
+| **Scenario** | **Description** |
+|--------------|----------------|
+| Functionnality | Launch a game |
+| Objective | Regroup player to launch a game |
+| Prerequisites | Created or Join a created room|
+| Player Readiness | All players must be marked as "Ready" before the game can be launched. |
+| Minimum Players | The game can be started with a minimum of 2 players, but gameplay may be more challenging. |
+| Maximum Players | Up to 4 players can join the lobby for optimal cooperative experience. |
+| Steps | Each player joins the lobby and sets their status to "Ready." Once all players are ready, the host can launch the game. If fewer than 4 players are present, the game can still be started, but difficulty may increase. |
+
+### **6.3 Tutorial Level**
+
+#### **6.3.1 Tutorial Structure**
 
 | **Section** | **Description** |
 |-------------|----------------|
@@ -201,15 +214,17 @@ Multiplayer:
 | Mini-games | Introduction to the 3 main mini-games used throughout missions |
 | Fog Mechanics | Safe zones, fog effects, survival tactics |
 
-#### **6.2.2 Mini-Games Details**
+#### **6.3.2 Mini-Games Details**
 
 | **Mini-Game** | **Description** | **Controls** | **Success Criteria** |
-|---------------|----------------|---------------|---------------------|
-| Generator Repair | Match color sequences within time limit | Mouse clicks, E to interact | Complete sequence before timer expires |
-| Door Hacking | Press buttons in correct order shown | Number keys (1-9) | Input correct code sequence |
-| System Override | Hold position while defending against AI | ZQSD movement, mouse aim | Survive for required duration |
+| **Mini-Game**      | **Description**                                                                 | **Controls**                | **Success Criteria**                          |
+|--------------------|---------------------------------------------------------------------------------|-----------------------------|------------------------------------------------|
+| Generator Repair   | Players must clock on the good color at the good timing within no limited time. The sequence increases in complexity as the tutorial progresses. Visual and audio cues guide the player, and mistakes reset the sequence. | E to interact | Complete the correct color sequence three time to fix it. No more than one mistakes allowed per attempt. |
+| Door Hacking       | Players are presented with a keypad or panel displaying a randomized code. They must press the buttons in the correct order as shown, sometimes under time pressure or while distractions (e.g., alarms) occur. Incorrect inputs require restarting the sequence. | Number keys (1-9)           | Input the correct code sequence without errors. Successfully unlock the door within the time limit. |
+|Turret Desactivation| Players must clock on the good color at the good timing within no limited time. The sequence increases in complexity as the tutorial progresses. Visual and audio cues guide the player, and mistakes reset the sequence. | E to interact | Complete the correct color sequence three time to fix it. No more than one mistakes allowed per attempt. |
+| System Override    | Players must hold a designated area and defend against waves of AI enemies while a system override progresses. The override bar fills over time, but resets if the player leaves the area or is incapacitated. Teamwork is encouraged for faster completion. | ZQSD movement, mouse aim    | Survive and maintain control of the area for the required duration. Override bar must reach 100% without interruption. |
 
-#### **6.2.3 Learning Objectives**
+#### **6.3.3 Learning Objectives**  
 
 | **Skill** | **Practice Method** |
 |-----------|-------------------|
@@ -219,24 +234,23 @@ Multiplayer:
 | Mini-games | Practice area for each mini-game type |
 | Team Coordination | Simple cooperative tasks requiring 2+ players |
 
-#### **6.2.4 Tutorial Flow**
+#### **6.3.4 Tutorial Flow**
+
+The tutorial level is structured to progressively introduce and validate core gameplay mechanics. Each section below outlines the acceptance criteria and expected tester actions.
 
 1. **Safe Room Start**
-    - Basic movement controls
-    - UI familiarization
-    - Weapon selection
+    - **Acceptance Criteria:** Player spawns in a secure area with no threats. All movement controls (walk, sprint, crouch, jump) are functional. UI elements (health, objectives, inventory) are visible and responsive. Weapon selection menu is accessible and allows equipping at least one weapon.
+    - **Tester Actions:** Verify movement controls, interact with UI, select and equip a weapon.
 
 2. **Training Area**
-    - Combat practice zone
-    - Mini-game stations
-    - AI behavior demonstration
+    - **Acceptance Criteria:** Dedicated zones for combat practice (firearms and melee), functional mini-game stations (generator repair, door hacking, system override), and AI demonstration (basic patrol and reaction behaviors). All stations must be accessible and provide feedback on completion.
+    - **Tester Actions:** Complete combat drills, interact with each mini-game station, observe and trigger AI behaviors.
 
 3. **Practice Mission**
-    - Small-scale mission combining all learned elements
-    - Safe environment to test mechanics
-    - Team coordination exercises
+    - **Acceptance Criteria:** A short mission scenario combining movement, combat, mini-games, and team coordination. Environment is safe but includes basic hazards (e.g., fog zones, simple AI enemies). Mission objectives are clear and trackable.
+    - **Tester Actions:** Work through mission objectives, coordinate with other testers if multiplayer, utilize learned mechanics in a controlled setting.
 
 4. **Final Test**
-    - Complete all mini-games under time pressure
-    - Navigate fog-filled area
-    - Defeat practice AI enemies
+    - **Acceptance Criteria:** All mini-games must be completed within a set time limit. The area includes fog hazards requiring navigation and survival tactics. AI enemies are present and must be defeated using available weapons and teamwork. Successful completion returns the player to the main menu or marks tutorial as complete.
+    - **Tester Actions:** Complete mini-games under time pressure, navigate fog safely, defeat AI enemies, and confirm tutorial completion.
+
