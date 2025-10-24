@@ -26,6 +26,10 @@
 		{
 			"Name": "SteamSockets",
 			"Enabled": true
+		},
+		{
+			"Name": "SkeletalMerging",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
