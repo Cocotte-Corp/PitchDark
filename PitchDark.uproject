@@ -28,6 +28,10 @@
 			"Enabled": true
 		},
 		{
+			"Name": "AudioModulation",
+			"Enabled": true
+		},
+		{
 			"Name": "SkeletalMerging",
 			"Enabled": true
 		}
