@@ -145,7 +145,7 @@ Multiplayer:
 
 ### **6.1 Main Menu**
 
-#### **6.1.1 Create Lobby Button**
+#### **6.1.1 Create Room Button**
 
 | **Scenario** | **Description** |
 |----------|---------------|
@@ -154,7 +154,7 @@ Multiplayer:
 | Prerequisites | Game launched, in the main menu |
 | Steps | A Create Lobby button is visible on the main menu. When pressed, it opens a lobby creation interface. The player can configure basic settings (e.g., lobby name, visibility, max players). Pressing Confirm creates a lobby and the player is placed inside it as the host. |
 
-#### **6.1.2 Join Lobby Button**
+#### **6.1.2 Find Room Button**
 
 | **Scenario** | **Description** |
 |----------|---------------|
@@ -190,240 +190,67 @@ Multiplayer:
 | Prerequisites | Game launched, in the main menu |
 | Steps | When pressed, it asks the player to confirm quitting. Confirming closes the game application Cancelling returns the player to the main menu. |
 
-### **6.2 Settings Menu**
-
-#### **6.2.1 Visual parameters**
-
-| **Scenario** | **Description** |
-|----------|---------------|
-| Functionnality | Visual parameters |
-| Objective | Change visual settings |
-| Prerequisites | Whether in main menu or in-game, Settings menu open |
-| Steps | The player can open the Options → Video menu. The player can change resolution and graphics quality settings. Changes are applied immediately or after confirmation. Settings are saved and remain active after restarting the game. |
-
-#### **6.2.1 Audio parameters**
+### **6.2 Lobby**
+#### **6.2.1 Lobby Requirements**
 
 | **Scenario** | **Description** |
-|----------|---------------|
-| Functionnality | Audio parameters |
-| Objective | Change audio settings |
-| Prerequisites | Whether in main menu or in-game, Settings menu open |
-| Steps | The player can open the Options → Audio menu. The player can adjust master volume, music volume, and sound effects volume. Changes are applied in real-time. Settings are saved and remain active after restarting the game. |
+|--------------|----------------|
+| Functionnality | Launch a game |
+| Objective | Regroup player to launch a game |
+| Prerequisites | Created or Join a created room|
+| Player Readiness | All players must be marked as "Ready" before the game can be launched. |
+| Minimum Players | The game can be started with a minimum of 2 players, but gameplay may be more challenging. |
+| Maximum Players | Up to 4 players can join the lobby for optimal cooperative experience. |
+| Steps | Each player joins the lobby and sets their status to "Ready." Once all players are ready, the host can launch the game. If fewer than 4 players are present, the game can still be started, but difficulty may increase. |
 
-#### **6.2.3 Keybind parameters**
+### **6.3 Tutorial Level**
 
-| **Scenario** | **Description** |
-|----------|---------------|
-| Functionnality | Keybind parameters |
-| Objective | Change Keybinds |
-| Prerequisites | Whether in main menu or in-game, Settings menu open |
-| Steps | The player can open the Options → Keybinds menu. The player can rebind movement keys, actions, and other Keybinds. The player can restore defaults at any time. Settings are saved and remain active after restarting the game. |
+#### **6.3.1 Tutorial Structure**
 
-#### **6.3 Lobby**
+| **Section** | **Description** |
+|-------------|----------------|
+| Introduction | Basic movement controls (ZQSD), Sprint (Shift), Crouch (Ctrl), Jump (Space) |
+| Combat Training | Weapon handling, reloading mechanics, melee combat with the pipe |
+| Mini-games | Introduction to the 3 main mini-games used throughout missions |
+| Fog Mechanics | Safe zones, fog effects, survival tactics |
 
-#### **6.3.1 Player list**
+#### **6.3.2 Mini-Games Details**
 
-| **Scenario** | **Description** |
-|----------|---------------|
-| Functionnality | Player list |
-| Objective | Get players info and status on lobby |
-| Prerequisites | In a lobby with players |
-| Steps | The lobby displays a list of all connected players. Each player’s username and profile picture are visible. The host is clearly identified in the list. Each player can toggle their Ready / Not Ready status. The current status is visible to all players in the lobby. The lobby prevents the game from starting until minimum requirements are met (e.g., minimum players, all players ready). |
+| **Mini-Game** | **Description** | **Controls** | **Success Criteria** |
+| **Mini-Game**      | **Description**                                                                 | **Controls**                | **Success Criteria**                          |
+|--------------------|---------------------------------------------------------------------------------|-----------------------------|------------------------------------------------|
+| Generator Repair   | Players must clock on the good color at the good timing within no limited time. The sequence increases in complexity as the tutorial progresses. Visual and audio cues guide the player, and mistakes reset the sequence. | E to interact | Complete the correct color sequence three time to fix it. No more than one mistakes allowed per attempt. |
+| Door Hacking       | Players are presented with a keypad or panel displaying a randomized code. They must press the buttons in the correct order as shown, sometimes under time pressure or while distractions (e.g., alarms) occur. Incorrect inputs require restarting the sequence. | Number keys (1-9)           | Input the correct code sequence without errors. Successfully unlock the door within the time limit. |
+|Turret Desactivation| Players must clock on the good color at the good timing within no limited time. The sequence increases in complexity as the tutorial progresses. Visual and audio cues guide the player, and mistakes reset the sequence. | E to interact | Complete the correct color sequence three time to fix it. No more than one mistakes allowed per attempt. |
+| System Override    | Players must hold a designated area and defend against waves of AI enemies while a system override progresses. The override bar fills over time, but resets if the player leaves the area or is incapacitated. Teamwork is encouraged for faster completion. | ZQSD movement, mouse aim    | Survive and maintain control of the area for the required duration. Override bar must reach 100% without interruption. |
 
-#### **6.3.2 Host privileges**
+#### **6.3.3 Learning Objectives**  
 
-| **Scenario** | **Description** |
-|----------|---------------|
-| Functionnality | Keybind parameters |
-| Objective | Start the game |
-| Prerequisites | In a lobby with players, being the host |
-| Steps | The host has the ability to start the game once all conditions are met. The host can see which players are ready and which are not. If a player disconnects or leaves, the lobby updates immediately. If the host leaves, host migration occurs (if supported) or the lobby closes. |
+| **Skill** | **Practice Method** |
+|-----------|-------------------|
+| Movement | Obstacle course with jumping, crouching sections |
+| Combat | Target practice area with both firearms and melee |
+| Stealth | Avoid AI patrols in controlled environment |
+| Mini-games | Practice area for each mini-game type |
+| Team Coordination | Simple cooperative tasks requiring 2+ players |
 
-#### **6.3.3 All players privileges**
+#### **6.3.4 Tutorial Flow**
 
-| **Scenario** | **Description** |
-|----------|---------------|
-| Functionnality | All players privileges |
-| Objective | Various |
-| Prerequisites | In a lobby with players |
-| Steps | Players can leave the lobby at any time and return to the main menu. The lobby updates in real-time when players join, leave, or change status. Error handling is provided (e.g., if the host starts the game but a player disconnects at the same moment). |
+The tutorial level is structured to progressively introduce and validate core gameplay mechanics. Each section below outlines the acceptance criteria and expected tester actions.
 
-### **6.4 Player behaviour**
+1. **Safe Room Start**
+    - **Acceptance Criteria:** Player spawns in a secure area with no threats. All movement controls (walk, sprint, crouch, jump) are functional. UI elements (health, objectives, inventory) are visible and responsive. Weapon selection menu is accessible and allows equipping at least one weapon.
+    - **Tester Actions:** Verify movement controls, interact with UI, select and equip a weapon.
 
-#### **6.4.1 Player input**
+2. **Training Area**
+    - **Acceptance Criteria:** Dedicated zones for combat practice (firearms and melee), functional mini-game stations (generator repair, door hacking, system override), and AI demonstration (basic patrol and reaction behaviors). All stations must be accessible and provide feedback on completion.
+    - **Tester Actions:** Complete combat drills, interact with each mini-game station, observe and trigger AI behaviors.
 
-| **Scenario** | **Description** |
-|--------------|-----------------|
-| **Functionality** | Movement Controls |
-| **Objective** | Make the player move |
-| **Prerequisites** | In a game |
-| **Input list** |<ul> <li> **Move Forward** → Default: Z</li> <li> **Move Left** → Default: Q </li> <li> **Move Backward** → Default: S </li> <li> **Move Right** → Default: D </li><li>**Jump** → Default: Space</li><li>**Crouch** → Default: LeftCtrl</li><li>**Sprint** → Default: Maj (Shift)</li><li>**Interact with elements** → Default: E</li><li>**Shoot / Attack with weapon** → Default: Lmb (or equivalent)</li><li>**Change Weapon** → Default: 1, 2, 3</li>
-| **General behaviour** | <ul><li> Movement responds immediately to input and stops when the key is released.</li><li>Diagonal movement is possible by combining keys (e.g., forward + left). </li><li>Can only jump while on the ground.</li><li>Can only sprint while moving forward.</li><li>Controls respond with minimal input latency.</li><li>Input conflicts are handled (e.g., pressing crouch + sprint).</li><li>The system provides feedback when an action cannot be performed (e.g., no ammo, blocked path).lt LeftClick)</li></ul>
+3. **Practice Mission**
+    - **Acceptance Criteria:** A short mission scenario combining movement, combat, mini-games, and team coordination. Environment is safe but includes basic hazards (e.g., fog zones, simple AI enemies). Mission objectives are clear and trackable.
+    - **Tester Actions:** Work through mission objectives, coordinate with other testers if multiplayer, utilize learned mechanics in a controlled setting.
 
-#### **6.4.2 Feedback**
+4. **Final Test**
+    - **Acceptance Criteria:** All mini-games must be completed within a set time limit. The area includes fog hazards requiring navigation and survival tactics. AI enemies are present and must be defeated using available weapons and teamwork. Successful completion returns the player to the main menu or marks tutorial as complete.
+    - **Tester Actions:** Complete mini-games under time pressure, navigate fog safely, defeat AI enemies, and confirm tutorial completion.
 
-The game provides clear and responsive feedback in the following areas:
-
-
-| **Scenario** | **Description** |
-|----------|---------------|
-| Functionnality | Button Interactions |
-| Behaviour | <ul><li>Visual and/or audio cues are triggered when any buttonis hovered over, pressed, orreleased.</li><li>Disabled buttons arevisually distinct</li></ul>
-
----
-
-| **Scenario** | **Description** |
-|----------|---------------|
-| Functionnality | Player Actions |
-| Behaviour | <ul><li>Immediate feedback is given for actions such as movement,jumping, shooting,interacting, or taking damage(e.g., sound effects, screenshake, UI indicators).</li><li>Health and status changes are clearly communicated viathe HUD.</li></ul>
-
----
-
-| **Scenario** | **Description** |
-|----------|---------------|
-| Functionnality | Quest Progression |
-| Behaviour | <ul><li>Notifications or UI updates inform the player of quest objectives, progress, andcompletion.</li><li>Errors or failed objectives are clearly indicated</li></ul>
-
----
-
-| **Scenario** | **Description** |
-|----------|---------------|
-| Functionnality | Mini Games |
-| Behaviour | <ul><li>Success, failure, and progress within mini gamesare communicated through visual and/or audio feedback..</li><li>Instructions and results are clearly displayed to the player.</li></ul>
-
-#### **6.4.3 Weapons**
-
-Each weapon has unique stats (damage, fire rate, range, reload speed).
-Below is a list of available weapons:
-
-| **Weapon** | **Description** |
-|----------|---------------|
-| Rifle | automatic fire, high damage, slower reload |
-| Pistol | semi-automatic, faster reload, lower damage |
-| Metal Pipe | melee weapon, unlimited use, no ammunition required |
-
----
-
-| **Scenario** | **Description** |
-|----------|---------------|
-| Functionnality | Ammunition |
-| Objective | Loot ammunition |
-| Prerequisites | In a game |
-| Steps | Players can find and collect magazines for their firearms (rifle and pistol). Looted magazines are stored in the inventory system. Ammunition is consumed when firing and decreases from the inventory count. Magazines must match the weapon type (e.g., pistol magazines cannot be used in rifles). |
-
----
-
-| **Scenario** | **Description** |
-|----------|---------------|
-| Functionnality | Reloading |
-| Objective | Reloading the weapon |
-| Prerequisites | In a game, weapon in hand |
-| Steps | A weapon can only be reloaded if the player has at least one magazine in inventory. Reloading consumes one magazine and refills the weapon’s ammo clip. If no magazines are available, the reload action fails and a “No ammo” feedback is displayed. Reload animations and timing differ per weapon type (longer for rifle, shorter for pistol). |
-
----
-
-- Players cannot shoot while running.
-- Attempting to fire while sprinting provides feedback (e.g., click sound, UI indicator).
-- Players must stop sprinting (stand still or walk) before firing.
-- Melee attacks (metal pipe) can still be used while running.
-- Weapon switching is instantaneous or delayed depending on design (swap animation).
-- All actions (shooting, reloading, switching) include animations and sound feedback.
-- The system prevents exploits such as infinite ammo, skipping reload, or shooting without delay.
-
-### **6.5 AI Behaviour**
-
-| **Scenario**  | **Description**                                                                                               |
-| ------------- | ------------------------------------------------------------------------------------------------------------- |
-| Functionality | Enemy patrol                                                                                                  |
-| Objective     | Make AI follow a predefined or random route                                                                   |
-| Prerequisites | Enemy spawned in game world                                                                                   |
-| Steps         | When idle, AI follows a patrol path. If the player is not detected, the AI continues patrolling according to parameters (loop, back and forth, stay). |
-
-| **Scenario**  | **Description**                                                                                                                                      |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Functionality | Enemy vision                                                                                                                                         |
-| Objective     | Detect player presence via line of sight                                                                                                             |
-| Prerequisites | Player enters AI’s field of view                                                                                                                     |
-| Steps         | If the player is visible within AI’s detection cone and range, AI becomes alerted and initiates pursuit. Obstacles can block detection. |
-
-| **Scenario**  | **Description**                                                                                                |
-| ------------- | -------------------------------------------------------------------------------------------------------------- |
-| Functionality | Enemy hearing                                                                                                  |
-| Objective     | Detect player presence through sound                                                                           |
-| Prerequisites | Player produces noise (footsteps, gunfire, interaction) within AI’s hearing radius                             |
-| Steps         | AI reacts to the sound by moving toward the source. If the player is confirmed visually or by contact, AI initiates pursuit. |
-
-| **Scenario**  | **Description**                                                                                                                             |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Functionality | Enemy chase                                                                                                                                 |
-| Objective     | Make AI pursue detected players                                                                                                             |
-| Prerequisites | Player detected through sight or hearing                                                                                                    |
-| Steps         | AI increases movement speed, navigates obstacles, and follows the player. Chase continues until line of sight is broken for a set duration. |
-
-| **Scenario**  | **Description**                                                                                            |
-| ------------- | ---------------------------------------------------------------------------------------------------------- |
-| Functionality | Enemy attack                                                                                               |
-| Objective     | Damage the player when in range                                                                            |
-| Prerequisites | Player in melee range of AI                                                                                |
-| Steps         | AI performs attack animation and applies damage if successful. Cooldown prevents repeated instant attacks. |
-
-| **Scenario**  | **Description**                                                                                      |
-| ------------- | ---------------------------------------------------------------------------------------------------- |
-| Functionality | Enemy opening doors                                                                                  |
-| Objective     | Prevent safe zones behind closed doors                                                               |
-| Prerequisites | AI chasing or patrolling, door in path                                                               |
-| Steps         | AI interacts with door to open it. If locked, AI may attempt forced entry (depending on enemy type). |
-
-
-| **Scenario**  | **Description**                                                                               |
-| ------------- | --------------------------------------------------------------------------------------------- |
-| Functionality | Enemy spawn                                                                                   |
-| Objective     | Introduce enemies dynamically                                                                 |
-| Prerequisites | Triggered event                                                                               |
-| Steps         | AI spawns at designated or randomized points. Spawn can be immediate, timed, or event-driven. |
-
-| **Scenario**  | **Description**                                                                                                                               |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Functionality | Enemy sounds                                                                                                                                  |
-| Objective     | Add immersion and indirect feedback                                                                                                           |
-| Prerequisites | Enemy active in game                                                                                                                          |
-| Steps         | AI emits audio cues such as footsteps, growls, or screams. These can alert players and indicate enemy state (patrolling, alerted, attacking). |
-
-| **Scenario**  | **Description**                                                                         |
-| ------------- | --------------------------------------------------------------------------------------- |
-| Functionality | Enemy jumpscare                                                                         |
-| Objective     | Startle player through sudden scripted/dynamic event                                    |
-| Prerequisites | Trigger zone or scripted event                                                          |
-| Steps         | AI appears suddenly, with visual and/or audio cue. May transition into chase or attack. |
-
-| **Scenario**  | **Description**                                                                                                         |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Functionality | Enemy death                                                                                                             |
-| Objective     | Remove AI from gameplay upon defeat                                                                                     |
-| Prerequisites | Enemy health reduced to zero                                                                                            |
-| Steps         | AI plays death animation, emits sound, and despawns after a delay. Death may trigger item drops or mission progression. |
-
-### **6.6 In-Game Multiplayer**
-
-| Feature                | Description |
-|-------------------------|-------------|
-| **Player Visibility**  | - While alive, players can observe others’ actions (movement, shooting, interacting).<br> - Animations and actions are synchronized across clients (e.g., reloads are visible).<br> - Actions are updated in real time for immersion. |
-| **Spectator Mode (Dead Players)** | - When dead, players enter Spectator Mode.<br> - Can watch teammates’ POVs.<br> - Supports manual switching or auto-follow.<br> - Updates in real time with active players’ movements and actions.<br> - Spectators cannot influence gameplay (no interaction, no unfair comms). |
-
-
----
-
-## **7. Feature not to be tested**
-
-- Character customization
-- Room settings
-- Sliding menu
-
-
----
-
-## **8. Project Information**
-
-- **Project Name:** Pitch Dark
-- **Team Members:** Amaury Bariety, Bastien Rodrigues, Cyprien Nguyen-Van-Vien, Damien Benais-Captal and Viktor Bruggeman
-- **Repository:** [Github](https://github.com/Cocotte-Corp/PitchDark)
