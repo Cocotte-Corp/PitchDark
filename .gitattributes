@@ -1,1 +1,2 @@
 *.mkv filter=lfs diff=lfs merge=lfs -text
+Content/Megaspikan/Textures/T_Megaspikan_Nrm.uasset filter=lfs diff=lfs merge=lfs -text
